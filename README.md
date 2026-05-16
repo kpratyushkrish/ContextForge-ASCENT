@@ -5,11 +5,10 @@ This is the **only** bench for P-02. Running it is the L3 evaluation. The output
 ## Quickstart
 
 ```bash
-cd bench-p02-context
 pip install -r requirements.txt
 python run.py \
   --adapter adapters.dummy:DummyAdapter \
-  --out l3_report.json
+  --out outputs/l3_report.json
 ```
 
 You should see a multi-line banner:
@@ -60,8 +59,8 @@ Headline number: weighted automated total (max 0.80) + manual axes (max 0.20) at
 Subclass `Adapter` in `adapters/<your_team>.py`:
 
 ```python
-from adapter import Adapter
-from schema import Event, IncidentSignal, Context
+from anvil_benchmark.adapter import Adapter
+from anvil_benchmark.schema import Event, IncidentSignal, Context
 
 class Engine(Adapter):
     def ingest(self, events): ...
@@ -69,9 +68,32 @@ class Engine(Adapter):
     def close(self): ...
 ```
 
-See `schema.py` for the exact `Event`, `IncidentSignal`, and `Context` shapes.
+See `src/anvil_benchmark/schema.py` for the exact `Event`, `IncidentSignal`, and `Context` shapes.
 
 For non-Python engines, the adapter bridges via subprocess / gRPC / HTTP.
+
+## Repository structure
+
+```text
+.
+|-- run.py                         # root shim kept for the public benchmark command
+|-- adapters/                      # public adapter entrypoints, e.g. adapters.myteam:Engine
+|-- src/anvil_benchmark/           # benchmark framework: generator, harness, metrics, schema
+|-- scripts/                       # utility scripts, including self_check.py
+|-- configs/                       # sample benchmark config inputs
+|-- outputs/                       # generated benchmark reports
+|-- tests/                         # test files
+|-- docs/                          # architecture notes, PDFs, walkthroughs
+|-- requirements.txt               # install input kept at root for pip compatibility
+|-- Dockerfile                     # container entrypoint kept at root for docker build compatibility
+`-- README.md                      # repository overview kept at root for hosting/tooling
+```
+
+The main workflow remains:
+
+```bash
+python run.py --adapter adapters.myteam:Engine --out outputs/l3_report.json
+```
 
 ## Decoys
 

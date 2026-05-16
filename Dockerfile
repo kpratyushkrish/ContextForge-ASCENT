@@ -6,7 +6,7 @@ COPY . .
 
 RUN pip install --no-cache-dir numpy>=1.24.0
 
-WORKDIR /app/bench-p02-context
+WORKDIR /app
 
 ENTRYPOINT ["python"]
-CMD ["run.py", "--adapter", "adapters.myteam:Engine", "--out", "l3_report.json"]
+CMD ["run.py", "--adapter", "adapters.myteam:Engine", "--out", "outputs/l3_report.json"]

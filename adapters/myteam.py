@@ -8,13 +8,16 @@ import os
 import sys
 from typing import Iterable, Literal
 
-# Add project root to path so `src` is importable
-_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-if _PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, _PROJECT_ROOT)
+# Add repository roots to path so both `anvil_benchmark` and any
+# implementation package under `src.*` remain importable.
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_SRC_ROOT = os.path.join(_PROJECT_ROOT, "src")
+for _path in (_PROJECT_ROOT, _SRC_ROOT):
+    if _path not in sys.path:
+        sys.path.insert(0, _path)
 
-from adapter import Adapter
-from schema import Context, Event, IncidentSignal
+from anvil_benchmark.adapter import Adapter
+from anvil_benchmark.schema import Context, Event, IncidentSignal
 from src.memory.substrate import MemorySubstrate
 
 

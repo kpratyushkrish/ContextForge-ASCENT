@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from statistics import mean
 from typing import Any
 
-from schema import Context
+from .schema import Context
 
 
 @dataclass

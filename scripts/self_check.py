@@ -5,11 +5,17 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import os
 import sys
 import time
 
-from generator import GenConfig
-from harness import run
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_SRC_ROOT = os.path.join(_PROJECT_ROOT, "src")
+if _SRC_ROOT not in sys.path:
+    sys.path.insert(0, _SRC_ROOT)
+
+from anvil_benchmark.generator import GenConfig
+from anvil_benchmark.harness import run
 
 
 def adapter_factory_from_spec(spec: str):

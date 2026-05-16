@@ -5,10 +5,10 @@ import time
 from dataclasses import asdict
 from typing import Any
 
-from adapter import Adapter
-from generator import Dataset, GenConfig, generate
-from metrics import IncidentScore, aggregate, score_match, score_remediation
-from schema import Context, IncidentSignal
+from .adapter import Adapter
+from .generator import Dataset, GenConfig, generate
+from .metrics import IncidentScore, aggregate, score_match, score_remediation
+from .schema import Context, IncidentSignal
 
 
 # Indicative axis weights. Council may rebalance before the event.

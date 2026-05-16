@@ -9,7 +9,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Iterable, Literal
 
-from schema import Context, Event, IncidentSignal
+from .schema import Context, Event, IncidentSignal
 
 
 class Adapter(ABC):

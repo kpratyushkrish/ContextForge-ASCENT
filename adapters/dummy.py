@@ -16,8 +16,8 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from typing import Any, Iterable, Literal
 
-from adapter import Adapter
-from schema import Context, Event, IncidentSignal
+from anvil_benchmark.adapter import Adapter
+from anvil_benchmark.schema import Context, Event, IncidentSignal
 
 
 def _parse(ts: str) -> datetime:
