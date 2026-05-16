@@ -1,0 +1,232 @@
+{
+  "mode": "deep",
+  "seeds": [
+    9999,
+    31415
+  ],
+  "per_seed": [
+    {
+      "seed": 9999,
+      "config": {
+        "seed": 9999,
+        "n_services": 20,
+        "days": 14,
+        "deploys": 30,
+        "topology_mutations": 8,
+        "incidents_train": 24,
+        "incidents_eval": 10,
+        "incident_families": 5,
+        "background_density": 200,
+        "start_ts": "2026-05-01T00:00:00Z"
+      },
+      "ingest_ms": 141.73,
+      "n_train": 39536,
+      "n_eval": 16662,
+      "n_signals": 10,
+      "mode": "deep",
+      "per_incident": [
+        {
+          "incident_id": "INC-1513-2",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 45.739299999695504
+        },
+        {
+          "incident_id": "INC-3456-3",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 45.9417999991274
+        },
+        {
+          "incident_id": "INC-9582-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 46.997299999929965
+        },
+        {
+          "incident_id": "INC-62845-1",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 59.03579999721842
+        },
+        {
+          "incident_id": "INC-8331-3",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 49.18610000095214
+        },
+        {
+          "incident_id": "INC-34003-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 49.36950000046636
+        },
+        {
+          "incident_id": "INC-38878-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 49.66719999720226
+        },
+        {
+          "incident_id": "INC-44359-4",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 59.624500001518754
+        },
+        {
+          "incident_id": "INC-1536-2",
+          "correct_family_in_top_k": false,
+          "precision_at_k": 0.0,
+          "remediation_matches": true,
+          "latency_ms": 50.01999999876716
+        },
+        {
+          "incident_id": "INC-68715-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 46.11570000270149
+        }
+      ],
+      "summary": {
+        "recall@5": 0.9,
+        "precision@5_mean": 0.26,
+        "remediation_acc": 1.0,
+        "latency_p95_ms": 59.04,
+        "latency_mean_ms": 50.17,
+        "n": 10
+      }
+    },
+    {
+      "seed": 31415,
+      "config": {
+        "seed": 31415,
+        "n_services": 20,
+        "days": 14,
+        "deploys": 30,
+        "topology_mutations": 8,
+        "incidents_train": 24,
+        "incidents_eval": 10,
+        "incident_families": 5,
+        "background_density": 200,
+        "start_ts": "2026-05-01T00:00:00Z"
+      },
+      "ingest_ms": 144.6,
+      "n_train": 39535,
+      "n_eval": 16663,
+      "n_signals": 10,
+      "mode": "deep",
+      "per_incident": [
+        {
+          "incident_id": "INC-17649-1",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 46.15479999847594
+        },
+        {
+          "incident_id": "INC-37973-1",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 43.900200002099155
+        },
+        {
+          "incident_id": "INC-55661-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 52.41110000133631
+        },
+        {
+          "incident_id": "INC-6517-0",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 44.80580000017653
+        },
+        {
+          "incident_id": "INC-9918-1",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 54.94410000028438
+        },
+        {
+          "incident_id": "INC-38761-2",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 43.91530000066268
+        },
+        {
+          "incident_id": "INC-93983-2",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 46.409300000959774
+        },
+        {
+          "incident_id": "INC-99173-2",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.2,
+          "remediation_matches": true,
+          "latency_ms": 44.957999998587184
+        },
+        {
+          "incident_id": "INC-672-2",
+          "correct_family_in_top_k": true,
+          "precision_at_k": 0.4,
+          "remediation_matches": true,
+          "latency_ms": 44.3249999989348
+        },
+        {
+          "incident_id": "INC-24535-3",
+          "correct_family_in_top_k": false,
+          "precision_at_k": 0.0,
+          "remediation_matches": true,
+          "latency_ms": 57.20899999869289
+        }
+      ],
+      "summary": {
+        "recall@5": 0.9,
+        "precision@5_mean": 0.26,
+        "remediation_acc": 1.0,
+        "latency_p95_ms": 54.94,
+        "latency_mean_ms": 47.9,
+        "n": 10
+      }
+    }
+  ],
+  "aggregated": {
+    "recall@5": 0.9,
+    "precision@5_mean": 0.26,
+    "remediation_acc": 1.0,
+    "latency_p95_ms": 59.04,
+    "latency_mean_ms": 49.035,
+    "n_seeds": 2,
+    "n_signals_total": 20,
+    "n": 20
+  },
+  "score": {
+    "axes": {
+      "recall@5": 0.9,
+      "precision@5_mean": 0.26,
+      "remediation_acc": 1.0,
+      "latency_p95_ms": 1.0,
+      "manual_context": null,
+      "manual_explain": null
+    },
+    "weighted_score": 0.659,
+    "max_automated": 0.8,
+    "note": "manual_* axes are panel-graded and excluded from the automated score"
+  }
+}
